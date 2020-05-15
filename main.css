@@ -17,7 +17,7 @@
   }
   
   body {
-    background: url('https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-background.png') repeat center;
+    background: url('../images/wedding-landing-background.png') repeat center;
     font-family: 'Libre Baskerville', serif;
     font-size: 1.125rem;
     line-height: 1.5;
@@ -35,7 +35,7 @@
     text-align: center;
   }
   
-  h1,
+  h1, 
   h2 {
     font-family: 'Great Vibes', cursive;
   }
@@ -65,11 +65,19 @@
   =============================*/
   
   .cover {
-    background: url('https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-cover.jpg') no-repeat 70% center/cover;
+    background: url('../images/wedding-landing-cover.jpg') no-repeat 70% center/cover;
     display: table;
     text-align: center;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+  
+    .cover {
+      background: url('../images/wedding-landing-cover.jpg') no-repeat center/cover;
+    }
+  
   }
   
   .hero-text-wrapper {
@@ -90,9 +98,31 @@
     margin-bottom: 0; /* To negate the effect of the single-direction margin declaration. */
   }
   
+  @media (min-width: 768px) {
+  
+    .hero-text {
+      padding: 1.25rem;
+      border-radius: 4px;
+      width: 50%;
+    }
+  
+    .hero-text h1 {
+      font-size: 7rem;
+    }
+  
+  }
+  
   .tagline {
     font-size: 1.25rem;
     letter-spacing: .15rem;
+  }
+  
+  @media (min-width: 768px) {
+  
+    .tagline {
+      text-transform: uppercase;
+    }
+  
   }
   
   .tagline::after {
@@ -120,7 +150,6 @@
     vertical-align: middle;
     margin: 0 .5rem;
   }
-  
   
   /* =============================
   
@@ -150,6 +179,20 @@
     background-color: #444349;
   }
   
+  @media (min-width: 768px) {
+  
+    .blurb {
+      display: inline-block;
+      width: 30%;
+      padding: 1.5rem;
+      margin: .5rem;
+    }
+  
+    .blurb::after {
+      display: none;
+    }
+  
+  }
   
   /* =============================
   
@@ -158,7 +201,7 @@
   =============================*/
   
   .program {
-    width: 100vw;
+    width: 100%;
     text-align: left;
     background: hsla(100,0%,0%,.6);
     color: #d2ba87;
@@ -167,16 +210,25 @@
   
   .program h2 {
     font-family: 'Great Vibes', cursive;
-    margin-top: 1rem; /* To account for the unequal margins compared to the previous section. */
+    margin-top: 1rem;
     text-align: center;
   }
   
   .program p {
-    font-style: italic;
+    font-style: italic; 
   }
   
   .program ul {
     letter-spacing: .025rem;
+  }
+  
+  @media (min-width: 768px) {
+  
+    .program-wrapper {
+      width: 30vw;
+      margin: 0 auto;
+    }
+  
   }
   
   /* =============================
@@ -193,6 +245,7 @@
     margin-bottom: 0;
   }
   
+  
   /* =============================
   
           FAQ STYLES
@@ -200,14 +253,14 @@
   =============================*/
   
   .faq {
-    background: hsla(100,0%,0%,.6);
+    background: hsla(100,0%,0%,.6);;
     color: #d2ba87;
-    width: 100vw;
+    width: 100%;
     text-align: center;
   }
   
   .faq h2 {
-    margin-top: 1rem; /* To even out top and bottom margins. */
+    margin-top: 1rem;
   }
   
   .faq p {
@@ -222,105 +275,6 @@
     width: 50vw;
     margin: 1.5rem auto;
     background-color: #d2ba87;
-  }
-  
-  .question {
-    font-weight: 700;
-    margin-bottom: .5rem;
-  }
-  
-  .answer {
-    margin-bottom: 1.5rem;
-  }
-  
-  
-  /* =============================
-  
-          FOOTER STYLES
-  
-  =============================*/
-  
-  footer {
-    height: 10vh;
-    width: 100vw;
-    background-color: #606060;
-    color: #fff;
-    font-family: 'Muli', sans-serif;
-    display: table;
-    text-align: center;
-    font-size: .875rem;
-  }
-  
-  .footer-wrapper {
-    display: table-cell;
-    vertical-align: middle;
-    padding: .5rem 1rem;
-  }
-  
-  footer p {
-    margin-bottom: 0;
-  }
-  
-  footer small {
-    line-height: 1.5;
-  }
-  
-  
-  @media (min-width: 768px) {
-  
-    .cover {
-      background: url('https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-cover.jpg') no-repeat center/cover;
-    }
-  
-  }
-  
-  
-  @media (min-width: 768px) {
-  
-    .hero-text {
-      padding: 1.25rem;
-      border-radius: 4px;
-      width: 50%;
-    }
-  
-    .hero-text h1 {
-      font-size: 7rem;
-    }
-  
-  }
-  
-  
-  @media (min-width: 768px) {
-  
-    .tagline {
-      text-transform: uppercase;
-    }
-  
-  }
-  
-  
-  @media (min-width: 768px) {
-  
-    .blurb {
-      display: inline-block;
-      width: 30%;
-      padding: 1.5rem;
-      margin: .5rem;
-    }
-  
-    .blurb::after {
-      display: none;
-    }
-  
-  }
-  
-  @media (min-width: 768px) {
-  
-    .program-wrapper {
-      width: 30vw;
-      margin: 0 auto;
-    }
-  
   }
   
   @media (min-width: 768px) {
@@ -343,10 +297,51 @@
   
   }
   
+  .question {
+    font-weight: 700;
+    margin-bottom: .5rem;
+  }
+  
+  .answer {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* =============================
+  
+          FOOTER STYLES
+  
+  =============================*/
+  
+  footer {
+    height: 10vh;
+    width: 100%;
+    background-color: #606060;
+    color: #fff;
+    font-family: 'Muli', sans-serif;
+    display: table;
+    text-align: center;
+    font-size: .875rem;
+  }
+  
+  .footer-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    padding: .5rem 1rem;
+  }
+  
+  footer p {
+    margin-bottom: 0;
+  }
+  
+  footer small {
+    line-height: 1.5;
+  }
+  
   @media (min-width: 768px) {
   
     footer {
       min-height: 7vh;
     }
   
-  }  
+  }
+  
