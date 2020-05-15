@@ -1,3 +1,9 @@
-This is a website I created for my wedding.
+This is a website that I created for my wedding.
 
-Mobile first, responsive, single-page site.
+It is a mobile first, responsive, single-page site.
+
+Fonts:
+ 
+
+Colors:
+
