@@ -65,7 +65,7 @@
   =============================*/
   
   .cover {
-    background: url('/images/IMG_1733.jpg') no-repeat 48% center/cover;
+    background: url('images/IMG_1733.jpg') no-repeat 48% center/cover;
     display: table;
     text-align: center;
     height: 100vh;
@@ -75,7 +75,7 @@
   @media (min-width: 768px) {
 
     .cover {
-      background: url('/images/IMG_1733.jpg') no-repeat center/cover;
+      background: url('images/IMG_1733.jpg') no-repeat center/cover;
     }
 
   }
