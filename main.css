@@ -17,7 +17,7 @@
   }
   
   body {
-    background: url('/images/white-printer-paper-near-white-ceramic-mug-164642.jpg') repeat center;
+    background: #eff0eb;
     font-family: 'Libre Baskerville', serif;
     font-size: 1.125rem;
     line-height: 1.5;
@@ -70,15 +70,14 @@
     text-align: center;
     height: 100vh;
     width: 100%;
-    filter: saturate(80%);
   }
   
   @media (min-width: 768px) {
-  
+
     .cover {
       background: url('/images/IMG_1733.jpg') no-repeat center/cover;
     }
-  
+
   }
   
   .hero-text-wrapper {
@@ -89,7 +88,7 @@
   .hero-text {
     margin: 0 auto;
     padding: .625rem;
-    color: hsla(0,0%,100%,.9);
+    color: #eff0ebec;
     background: hsla(100,0%,0%,.5);
   }
   
@@ -104,7 +103,8 @@
       margin: 0 auto;
       text-align: center;
       position: absolute;
-      bottom: 16.5%;
+      bottom: 17.5%;
+      opacity: 90%;
   }
 
   .arrow-down::after{
@@ -117,8 +117,8 @@
       bottom: 0;
       right: 0;
       left: 0;
-      border-right: 4px solid white;
-      border-bottom: 4px solid white;
+      border-right: 3px solid #eff0eb;
+      border-bottom: 3px solid #eff0eb;
       transform: rotate(45deg);
       animation: arrow 3s infinite ease;
   }
@@ -162,7 +162,7 @@
   .tagline::after {
     display: block;
     content: "";
-    background-color: #fff;
+    background-color: #eff0ebec;
     height: 1px;
     width: 12.515625rem;
     margin: .5rem auto;
@@ -178,7 +178,7 @@
   .date::after {
     display: inline-block;
     content: "";
-    background-color: #fff;
+    background-color: #eff0ebec;
     height: 1px;
     width: 1.5rem;
     vertical-align: middle;
@@ -193,6 +193,8 @@
   
   .blurb img {
     height: 7.5rem;
+    opacity: 75%;
+    filter: saturate(95%);
   }
   
   .blurb h3 {
@@ -350,7 +352,7 @@
     height: 10vh;
     width: 100%;
     background-color: #606060;
-    color: #fff;
+    color: #eff0ebec;
     font-family: 'Muli', sans-serif;
     display: table;
     text-align: center;
