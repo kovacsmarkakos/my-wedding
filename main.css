@@ -4,9 +4,13 @@
 
 =============================*/
 
-* {
-    box-sizing: border-box;
-  }
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
   
   /* Single-direction margin declaration to establish vertical rhythm. */
   h1,h2,h3,
@@ -17,6 +21,7 @@
   }
   
   body {
+    box-sizing: border-box;
     background: #eff0eb;
     font-family: 'Libre Baskerville', serif;
     font-size: 1.125rem;
