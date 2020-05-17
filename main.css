@@ -105,6 +105,8 @@
       position: absolute;
       bottom: 17.5%;
       opacity: 90%;
+      animation: fadeIn 1s ease-out 3s;
+      animation-fill-mode: backwards;
   }
 
   .arrow-down::after{
@@ -130,6 +132,15 @@
       50% {
         top: 80px;
       }
+  }
+
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
   }
 
   @media (min-width: 768px) {
