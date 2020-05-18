@@ -1,5 +1,20 @@
 /* =============================
 
+    COLORS
+
+=============================*/
+
+:root {
+  --background-color: #eff0eb;
+  --light-text: #eff0ebec;
+  --dark-text: #444349;
+  --heading-text: #d2ba87;
+  --link-color: #bd806e;
+  --link-color-hover: #eda087;
+}
+
+/* =============================
+
     GENERAL STYLES
 
 =============================*/
@@ -22,14 +37,14 @@
   
   body {
     box-sizing: border-box;
-    background: #eff0eb;
+    background: var(--background-color);
     font-family: 'Libre Baskerville', serif;
     font-size: 1.125rem;
     line-height: 1.5;
-    color: #444349;
+    color: var(--dark-text);
   }
   
-  .locations,
+  .locations-section,
   .program,
   .gifts,
   .faq,
@@ -55,11 +70,11 @@
   
   a {
     text-decoration: none;
-    color: #bd806e;
+    color: var(--link-color);
   }
   
   a:hover {
-    color: #eda087;
+    color: var(--link-color-hover);
     transition: color .15s ease-in-out;
   }
   
@@ -93,13 +108,13 @@
   .hero-text {
     margin: 0 auto;
     padding: .625rem;
-    color: #eff0ebec;
+    color: var(--light-text);
     background: hsla(100,0%,0%,.5);
   }
   
   .hero-text h1 {
     font-size: 3.15rem;
-    color: #d2ba87;
+    color: var(--heading-text);
     margin-bottom: 0; /* To negate the effect of the single-direction margin declaration. */
   }
   
@@ -124,8 +139,8 @@
       bottom: 0;
       right: 0;
       left: 0;
-      border-right: 3px solid #eff0eb;
-      border-bottom: 3px solid #eff0eb;
+      border-right: 3px solid var(--light-text);
+      border-bottom: 3px solid var(--light-text);
       transform: rotate(45deg);
       animation: arrow 3s infinite ease;
   }
@@ -178,7 +193,7 @@
   .tagline::after {
     display: block;
     content: "";
-    background-color: #eff0ebec;
+    background-color: var(--light-text);
     height: 1px;
     width: 12.515625rem;
     margin: .5rem auto;
@@ -194,7 +209,7 @@
   .date::after {
     display: inline-block;
     content: "";
-    background-color: #eff0ebec;
+    background-color: var(--light-text);
     height: 1px;
     width: 1.5rem;
     vertical-align: middle;
@@ -207,40 +222,39 @@
   
   =============================*/
   
-  .blurb img {
+  .location img {
     height: 7.5rem;
     opacity: 75%;
     filter: saturate(95%);
   }
   
-  .blurb h3 {
+  .location h3 {
     font-weight: 700;
   }
   
-  .blurb div {
+  .location div {
     font-family: 'Muli', sans-serif;
   }
   
-  
-  .blurb::after {
+  .location::after {
     content: "";
     display: block;
     height: .1875rem;
     width: 25vw;
     margin: 1.5rem auto;
-    background-color: #444349;
+    background-color: var(--dark-text);
   }
   
   @media (min-width: 768px) {
   
-    .blurb {
+    .location {
       display: inline-block;
       width: 30%;
       padding: 1.5rem;
       margin: .5rem;
     }
   
-    .blurb::after {
+    .location::after {
       display: none;
     }
   
@@ -256,7 +270,7 @@
     width: 100%;
     text-align: left;
     background: hsla(100,0%,0%,.6);
-    color: #d2ba87;
+    color: var(--heading-text);
     font-family: 'Muli', sans-serif;
   }
   
@@ -305,8 +319,8 @@
   =============================*/
   
   .faq {
-    background: hsla(100,0%,0%,.6);;
-    color: #d2ba87;
+    background: hsla(100,0%,0%,.6);
+    color: var(--heading-text);
     width: 100%;
     text-align: center;
   }
@@ -326,7 +340,7 @@
     height: .1875rem;
     width: 50vw;
     margin: 1.5rem auto;
-    background-color: #d2ba87;
+    background-color: var(--heading-text);
   }
   
   @media (min-width: 768px) {
@@ -367,8 +381,8 @@
   footer {
     height: 10vh;
     width: 100%;
-    background-color: #606060;
-    color: #eff0ebec;
+    background-color: hsla(100,0%,0%,.6);
+    color: var(--light-text);
     font-family: 'Muli', sans-serif;
     display: flex;
     justify-content: center;
