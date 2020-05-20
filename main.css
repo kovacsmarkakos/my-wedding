@@ -371,6 +371,24 @@
   .answer {
     margin-bottom: 1.5rem;
   }
+
+  /* =============================
+  
+          CONTACTS STYLES
+  
+  =============================*/
+
+  .addeventatc {
+    background-color: rgba(255, 255, 255, .8);
+  }
+
+  .addeventatc:hover {
+    background-color: var(--link-color-hover);
+  }
+
+  .calendar-text {
+    color: var(--dark-text);
+  }
   
   /* =============================
   
