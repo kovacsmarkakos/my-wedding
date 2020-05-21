@@ -3,7 +3,7 @@
     COLORS
 
 =============================*/
-
+/* Original Colors
 :root {
   --background-color: #eff0eb;
   --light-text: #eff0ebec;
@@ -11,6 +11,16 @@
   --heading-text: #d2ba87;
   --link-color: #bd806e;
   --link-color-hover: #eda087;
+}
+*/
+
+:root {
+  --background-color: whitesmoke;
+  --light-text: white;
+  --dark-text: #31304A;
+  --heading-text: #d0eaff;
+  --link-color: #e7adae;
+  --link-color-hover: #f8d1da;
 }
 
 /* =============================
@@ -57,11 +67,11 @@
   
   h1, 
   h2 {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'abugetregular', cursive;
   }
   
   h2 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   
   h3 {
@@ -85,17 +95,18 @@
   =============================*/
   
   .cover {
-    background: url('images/IMG_1733.jpg') no-repeat 48% center/cover;
+    background: url('images/20200125232433-Anna\ _\ Marci-_DSB4040.jpg') no-repeat 48% center/cover;
     display: table;
     text-align: center;
     height: 100vh;
     width: 100%;
+    
   }
   
   @media (min-width: 768px) {
 
     .cover {
-      background: url('images/IMG_1733.jpg') no-repeat center/cover;
+      background: url('images/20200125232433-Anna\ _\ Marci-_DSB4040.jpg') no-repeat center/cover;
     }
 
   }
@@ -109,12 +120,12 @@
     margin: 0 auto;
     padding: .625rem;
     color: var(--light-text);
-    background: hsla(100,0%,0%,.5);
+    background: var(--dark-text);
   }
   
   .hero-text h1 {
-    font-size: 3.15rem;
-    color: var(--heading-text);
+    font-size: 4rem;
+    color: var(--link-color-hover);
     margin-bottom: 0; /* To negate the effect of the single-direction margin declaration. */
   }
   
@@ -269,13 +280,12 @@
   .program {
     width: 100%;
     text-align: left;
-    background: hsla(100,0%,0%,.6);
+    background: var(--dark-text);
     color: var(--heading-text);
     font-family: 'Muli', sans-serif;
   }
   
   .program h2 {
-    font-family: 'Dancing Script', cursive;
     margin-top: 1rem;
     text-align: center;
   }
@@ -319,7 +329,7 @@
   =============================*/
   
   .faq {
-    background: hsla(100,0%,0%,.6);
+    background: var(--dark-text);
     color: var(--heading-text);
     width: 100%;
     text-align: center;
@@ -379,11 +389,11 @@
   =============================*/
 
   .addeventatc {
-    background-color: rgba(255, 255, 255, .8);
+    background-color: whitesmoke;
   }
 
   .addeventatc:hover {
-    background-color: var(--link-color-hover);
+    background-color: var(--link-color);
   }
 
   .calendar-text {
@@ -399,7 +409,7 @@
   footer {
     height: 15vh;
     width: 100%;
-    background-color: hsla(100,0%,0%,.6);
+    background-color: var(--dark-text);
     color: var(--light-text);
     font-family: 'Muli', sans-serif;
     font-size: .875rem;
