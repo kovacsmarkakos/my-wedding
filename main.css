@@ -3,6 +3,7 @@
     COLORS
 
 =============================*/
+
 /* Original Colors
 :root {
   --background-color: #eff0eb;
@@ -17,7 +18,7 @@
 :root {
   --background-color: whitesmoke;
   --light-text: white;
-  --dark-text: #31304A;
+  --dark-text: rgb(49, 48, 74);
   --heading-text: #d0eaff;
   --link-color: #e7adae;
   --link-color-hover: #f8d1da;
@@ -71,7 +72,7 @@
   }
   
   h2 {
-    font-size: 4rem;
+    font-size: 4.2rem;
   }
   
   h3 {
@@ -96,64 +97,108 @@
   
   .cover {
     background: url('images/20200125232433-Anna\ _\ Marci-_DSB4040.jpg') no-repeat 48% center/cover;
-    display: table;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     height: 100vh;
     width: 100%;
-    
   }
   
   @media (min-width: 768px) {
-
     .cover {
       background: url('images/20200125232433-Anna\ _\ Marci-_DSB4040.jpg') no-repeat center/cover;
     }
+  }
 
-  }
-  
-  .hero-text-wrapper {
-    display: table-cell;
-    vertical-align: middle;
-  }
-  
   .hero-text {
     margin: 0 auto;
     padding: .625rem;
     color: var(--light-text);
-    background: var(--dark-text);
+    background: rgba(49, 48, 74, .3);
   }
   
   .hero-text h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     color: var(--link-color-hover);
     margin-bottom: 0; /* To negate the effect of the single-direction margin declaration. */
   }
+
+  @media (min-width: 768px) {
+    .hero-text {
+      padding: 1.25rem;
+      border-radius: 4px;
+      width: 50%;
+    }
+    .hero-text h1 {
+      font-size: 7rem;
+    }
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+    letter-spacing: .15rem;
+  }
+
+  .tagline::after {
+    display: block;
+    content: "";
+    background-color: var(--light-text);
+    height: 1px;
+    width: 12.5rem;
+    margin: .5rem auto;
+  }
+    
+  @media (min-width: 768px) {
+    .tagline {
+      text-transform: uppercase;
+    }
+  }
+
+  .date {
+    font-size: 1.1rem;
+    letter-spacing: .15rem;
+    vertical-align: middle;
+  }
   
+  .date::before,
+  .date::after {
+    display: inline-block;
+    content: "";
+    background-color: var(--light-text);
+    height: 1px;
+    width: 1.5rem;
+    vertical-align: middle;
+    margin: 0 .5rem;
+  }
+  
+/* ARROW DOWN */
   .arrow-down {
       width: 100%;
       margin: 0 auto;
       text-align: center;
       position: absolute;
       bottom: 17.5%;
-      opacity: 90%;
+      opacity: 95%;
       animation: fadeIn 1s ease-out 3s;
       animation-fill-mode: backwards;
   }
 
   .arrow-down::after{
       content: "";
-      width: 40px;
-      height: 40px;
+      width: 35px;
+      height: 35px;
       position: absolute;
       margin: auto;
       top: 0;
       bottom: 0;
       right: 0;
       left: 0;
+      border-radius: 5px;
       border-right: 3px solid var(--light-text);
       border-bottom: 3px solid var(--light-text);
       transform: rotate(45deg);
-      animation: arrow 3s infinite ease;
+      animation: arrow 2s infinite ease;
   }
 
   @keyframes arrow{
@@ -172,59 +217,6 @@
     100% {
         opacity: 1;
     }
-  }
-
-  @media (min-width: 768px) {
-  
-    .hero-text {
-      padding: 1.25rem;
-      border-radius: 4px;
-      width: 50%;
-    }
-  
-    .hero-text h1 {
-      font-size: 7rem;
-    }
-  
-  }
-  
-  .tagline {
-    font-size: 1.25rem;
-    letter-spacing: .15rem;
-  }
-  
-  @media (min-width: 768px) {
-  
-    .tagline {
-      text-transform: uppercase;
-    }
-  
-  }
-  
-  .tagline::after {
-    display: block;
-    content: "";
-    background-color: var(--light-text);
-    height: 1px;
-    width: 12.515625rem;
-    margin: .5rem auto;
-  }
-  
-  .date {
-    font-size: 1.25rem;
-    letter-spacing: .15rem;
-    vertical-align: middle;
-  }
-  
-  .date::before,
-  .date::after {
-    display: inline-block;
-    content: "";
-    background-color: var(--light-text);
-    height: 1px;
-    width: 1.5rem;
-    vertical-align: middle;
-    margin: 0 .5rem;
   }
   
   /* =============================
