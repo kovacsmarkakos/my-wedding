@@ -241,6 +241,8 @@
 
   .location{
     transition: transform .3s;
+    width: 70%;
+    align-self: center;
   }
 
   .location:hover {
@@ -438,17 +440,19 @@
     background-color: var(--dark-text);
     color: var(--light-text);
     font-family: 'Muli', sans-serif;
-    font-size: .875rem;
-    padding-top: 5px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    font-size: .8rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 0px;
+    justify-items: center;
   }
   
   footer p {
     margin: 0;
-    align-self: center;
     text-align: center;
+    align-self: center;
   }
 
   .social {
@@ -472,5 +476,6 @@
   @media (min-width: 768px) {
     footer {
       height: 10vh;
+      font-size: .875rem;
     }
   }
