@@ -16,10 +16,10 @@
 */
 
 :root {
-  --background-color: whitesmoke;
-  --light-text: white;
-  --dark-text: rgb(49, 48, 74);
-  --heading-text: #d0eaff;
+  --background-color: #f5f5f5;
+  --light-text: #ffffff;
+  --dark-text: rgb(49, 48, 74, .9);
+  --heading-text: rgb(208, 234, 255, .9);
   --link-color: #e7adae;
   --link-color-hover: #f8d1da;
 }
@@ -79,7 +79,7 @@
     font-size: 1.5rem;
   }
   
-  a {
+  a{
     text-decoration: none;
     color: var(--link-color);
   }
@@ -96,7 +96,7 @@
   =============================*/
   
   .cover {
-    background: url('images/20200125232433-Anna\ _\ Marci-_DSB4040.jpg') no-repeat 48% center/cover;
+    background: linear-gradient(to right bottom, rgb(49, 48, 74, .2), rgb(49, 48, 74, .2)) ,url('images/20200125232433-Anna\ _\ Marci-_DSB4040.jpg') no-repeat 48% center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,19 +107,18 @@
   
   @media (min-width: 768px) {
     .cover {
-      background: url('images/20200125232433-Anna\ _\ Marci-_DSB4040.jpg') no-repeat center/cover;
+      background: linear-gradient(to right bottom, rgb(49, 48, 74, .2), rgb(49, 48, 74, .2)), url('images/20200125232433-Anna\ _\ Marci-_DSB4040.jpg') no-repeat center/cover;
     }
   }
 
   .hero-text {
-    margin: 0 auto;
     padding: .625rem;
     color: var(--light-text);
-    background: rgba(49, 48, 74, .3);
+    background: rgba(49, 48, 74, .25);
   }
   
   .hero-text h1 {
-    font-size: 4.5rem;
+    font-size: 5rem;
     color: var(--link-color-hover);
     margin-bottom: 0; /* To negate the effect of the single-direction margin declaration. */
   }
@@ -128,7 +127,7 @@
     .hero-text {
       padding: 1.25rem;
       border-radius: 4px;
-      width: 50%;
+      width: 100%;
     }
     .hero-text h1 {
       font-size: 7rem;
@@ -136,10 +135,10 @@
   }
 
   .tagline {
-    font-size: 1.1rem;
-    letter-spacing: .15rem;
+    font-size: 1.2rem;
+    letter-spacing: .18rem;
   }
-
+/*
   .tagline::after {
     display: block;
     content: "";
@@ -148,7 +147,7 @@
     width: 12.5rem;
     margin: .5rem auto;
   }
-    
+*/
   @media (min-width: 768px) {
     .tagline {
       text-transform: uppercase;
@@ -157,10 +156,10 @@
 
   .date {
     font-size: 1.1rem;
-    letter-spacing: .15rem;
+    letter-spacing: .18rem;
     vertical-align: middle;
   }
-  
+/*
   .date::before,
   .date::after {
     display: inline-block;
@@ -171,14 +170,14 @@
     vertical-align: middle;
     margin: 0 .5rem;
   }
-  
-/* ARROW DOWN */
+*/
+  /* ARROW DOWN */
   .arrow-down {
       width: 100%;
       margin: 0 auto;
       text-align: center;
       position: absolute;
-      bottom: 17.5%;
+      bottom: 19%;
       opacity: 95%;
       animation: fadeIn 1s ease-out 3s;
       animation-fill-mode: backwards;
@@ -203,7 +202,7 @@
 
   @keyframes arrow{
       0%, 100% {
-        top: 50px;
+        top: 40px;
       }
       50% {
         top: 80px;
@@ -224,40 +223,66 @@
         LOCATIONS STYLES
   
   =============================*/
+
+  .location-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .locations-section a{
+    color: var(--dark-text);
+  }
   
-  .location img {
+  .locations-section a:hover {
+    color: var(--dark-text);
+  }
+
+  .location{
+    transition: transform .3s;
+  }
+
+  .location:hover {
+    transform: translateY(-0.5rem) scale(1.03);
+  }
+
+  .location-text img {
     height: 7.5rem;
     opacity: 75%;
     filter: saturate(95%);
   }
   
-  .location h3 {
+  .location-text h3 {
     font-weight: 700;
   }
   
-  .location div {
+  .location-text div {
     font-family: 'Muli', sans-serif;
   }
   
-  .location::after {
+  .location-text::after {
     content: "";
     display: block;
-    height: .1875rem;
+    height: .1rem;
     width: 25vw;
     margin: 1.5rem auto;
     background-color: var(--dark-text);
   }
-  
+
   @media (min-width: 768px) {
-  
+    
+    .location-container {
+      flex-direction: row;
+    }
+
     .location {
-      display: inline-block;
       width: 30%;
       padding: 1.5rem;
       margin: .5rem;
     }
   
-    .location::after {
+    .location-text::after {
       display: none;
     }
   
@@ -336,19 +361,28 @@
     text-align: left;
   }
   
+  .question-group-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .question-group::after {
     content: "";
     display: block;
-    height: .1875rem;
+    height: .13rem;
     width: 50vw;
     margin: 1.5rem auto;
     background-color: var(--heading-text);
   }
   
   @media (min-width: 768px) {
-  
+    
+    .question-group-container {
+      flex-direction: row;
+    }
+
     .question-group {
-      display: inline-block;
       width: 30%;
       vertical-align: top;
       padding: 1.5rem;
