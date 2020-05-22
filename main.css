@@ -16,12 +16,12 @@
 */
 
 :root {
-  --background-color: #f5f5f5;
-  --light-text: #ffffff;
-  --dark-text: rgb(49, 48, 74, .9);
-  --heading-text: rgb(208, 234, 255, .9);
-  --link-color: #e7adae;
-  --link-color-hover: #f8d1da;
+  --background-color: rgba(245, 245, 245);
+  --light-text: rgba(255, 255, 255);
+  --dark-text: rgba(49, 48, 74, .9);
+  --heading-text: rgba(208, 234, 255, .9);
+  --link-color: rgba(231, 173, 174);
+  --link-color-hover: rgba(248, 209, 218);
 }
 
 /* =============================
