@@ -96,18 +96,18 @@
   =============================*/
   
   .cover {
-    background: linear-gradient(to right bottom, rgb(49, 48, 74, .2), rgb(49, 48, 74, .2)) ,url('images/20200125232433-Anna\ _\ Marci-_DSB4040.jpg') no-repeat 48% center/cover;
+    background: linear-gradient(to right bottom, rgba(83, 81, 124, .2), rgb(83, 81, 124, .2)),url('images/20200125232433-Anna\ _\ Marci-_DSB4040.jpg') no-repeat 48% center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 100vh;
+    height: 95vh;
     width: 100%;
   }
   
   @media (min-width: 768px) {
     .cover {
-      background: linear-gradient(to right bottom, rgb(49, 48, 74, .2), rgb(49, 48, 74, .2)), url('images/20200125232433-Anna\ _\ Marci-_DSB4040.jpg') no-repeat center/cover;
+      background: linear-gradient(to right bottom, rgba(83, 81, 124, .2), rgb(83, 81, 124, .2)), url('images/20200125232433-Anna\ _\ Marci-_DSB4040.jpg') no-repeat center/cover;
     }
   }
 
@@ -137,6 +137,7 @@
   .tagline {
     font-size: 1.2rem;
     letter-spacing: .18rem;
+    animation: moveInLeft 1s ease-out;
   }
 /*
   .tagline::after {
@@ -158,6 +159,7 @@
     font-size: 1.1rem;
     letter-spacing: .18rem;
     vertical-align: middle;
+    animation: moveInRight 1s ease-out;
   }
 /*
   .date::before,
@@ -217,6 +219,26 @@
         opacity: 1;
     }
   }
+
+  @keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-5rem); }
+    80% {
+      transform: translateX(0.5rem); }
+    100% {
+      opacity: 1;
+      transform: translate(0); } }
+  
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(5rem); }
+    80% {
+      transform: translateX(-0.5rem); }
+    100% {
+      opacity: 1;
+      transform: translate(0); } }
   
   /* =============================
   
