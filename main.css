@@ -6,11 +6,11 @@
 
 @font-face {
   font-family: 'fontello';
-  src: url('../fonts/fontello/fontello.eot?51289341');
-  src: url('../fonts/fontello/fontello.eot?51289341#iefix') format('embedded-opentype'),
+  src: url('fonts/fontello/fontello.eot?51289341');
+  src: url('fonts/fontello/fontello.eot?51289341#iefix') format('embedded-opentype'),
        url('fonts/fontello/fontello.woff2') format('woff2'),
        url('fonts/fontello/fontello.woff') format('woff'),
-       url('../fonts/fontello/fontello.ttf?51289341') format('truetype'),
+       url('fonts/fontello/fontello.ttf?51289341') format('truetype'),
        url('fonts/fontello/fontello.svg') format('svg');
   font-weight: normal;
   font-style: normal;
@@ -20,7 +20,7 @@
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   display: inline-block;
   width: 1em;
   margin-right: .2em;
@@ -160,7 +160,7 @@
     font-size: 1.2rem;
     letter-spacing: .18rem;
     animation: moveInLeft 1s ease-out;
-    animation-delay: 1s;
+    animation-delay: .8s;
     animation-fill-mode: backwards;
   }
 
@@ -175,7 +175,7 @@
     letter-spacing: .18rem;
     vertical-align: middle;
     animation: moveInRight 1s ease-out;
-    animation-delay: 1s;
+    animation-delay: .8s;
     animation-fill-mode: backwards;
   }
 
