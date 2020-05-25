@@ -8,10 +8,10 @@
   font-family: 'fontello';
   src: url('../fonts/fontello/fontello.eot?51289341');
   src: url('../fonts/fontello/fontello.eot?51289341#iefix') format('embedded-opentype'),
-       url('../fonts/fontello/fontello.woff2?51289341') format('woff2'),
-       url('../fonts/fontello/fontello.woff?51289341') format('woff'),
+       url('fonts/fontello/fontello.woff2') format('woff2'),
+       url('fonts/fontello/fontello.woff') format('woff'),
        url('../fonts/fontello/fontello.ttf?51289341') format('truetype'),
-       url('../fonts/fontello/fontello.svg?51289341#fontello') format('svg');
+       url('fonts/fontello/fontello.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -494,6 +494,7 @@
  
   footer small {
     line-height: 1.5;
+    padding: 0 5px;
   }
   
   @media (min-width: 768px) {
