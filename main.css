@@ -1,19 +1,41 @@
 /* =============================
 
-    COLORS
+    ICON-FONTS
 
 =============================*/
 
-/* Original Colors
-:root {
-  --background-color: #eff0eb;
-  --light-text: #eff0ebec;
-  --dark-text: #444349;
-  --heading-text: #d2ba87;
-  --link-color: #bd806e;
-  --link-color-hover: #eda087;
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello/fontello.eot?51289341');
+  src: url('../fonts/fontello/fontello.eot?51289341#iefix') format('embedded-opentype'),
+       url('../fonts/fontello/fontello.woff2?51289341') format('woff2'),
+       url('../fonts/fontello/fontello.woff?51289341') format('woff'),
+       url('../fonts/fontello/fontello.ttf?51289341') format('truetype'),
+       url('../fonts/fontello/fontello.svg?51289341#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
-*/
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.3rem;
+  display: inline-block;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+}
+ 
+.icon-twitter:before { content: '\f099'; } /* '' */
+.icon-github-circled:before { content: '\f09b'; } /* '' */
+.icon-instagram:before { content: '\f16d'; } /* '' */
+
+/* =============================
+
+    COLORS
+
+=============================*/
 
 :root {
   --background-color: rgba(245, 245, 245);
@@ -82,11 +104,11 @@
   a{
     text-decoration: none;
     color: var(--link-color);
+    transition: color .2s ease-in-out;
   }
   
   a:hover {
     color: var(--link-color-hover);
-    transition: color .15s ease-in-out;
   }
   
   /* =============================
@@ -96,7 +118,7 @@
   =============================*/
   
   .cover {
-    background: linear-gradient(to right bottom, rgba(83, 81, 124, .2), rgb(83, 81, 124, .2)),url('images/20200125232433-Anna\ _\ Marci-_DSB4040.jpg') no-repeat 48% center/cover;
+    background: linear-gradient(to right bottom, rgba(83, 81, 124, .2), rgb(83, 81, 124, .2)),url('images/cover-bg-img.jpg') no-repeat 48% center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,7 +129,7 @@
   
   @media (min-width: 768px) {
     .cover {
-      background: linear-gradient(to right bottom, rgba(83, 81, 124, .2), rgb(83, 81, 124, .2)), url('images/20200125232433-Anna\ _\ Marci-_DSB4040.jpg') no-repeat center/cover;
+      background: linear-gradient(to right bottom, rgba(83, 81, 124, .2), rgb(83, 81, 124, .2)), url('images/cover-bg-img.jpg') no-repeat center/cover;
     }
   }
 
@@ -262,13 +284,13 @@
   }
 
   .location{
-    transition: transform .3s;
-    width: 70%;
+    width: 45%;
     align-self: center;
   }
 
-  .location:hover {
-    transform: translateY(-0.5rem) scale(1.03);
+  .location-text {
+    transition: transform .2s;
+    text-align: center;
   }
 
   .location-text img {
@@ -283,6 +305,10 @@
   
   .location-text div {
     font-family: 'Muli', sans-serif;
+  }
+
+  .location-text:hover {
+    transform: translateY(-0.5rem) scale(1.03);
   }
   
   .location-text::after {
@@ -301,7 +327,7 @@
     }
 
     .location {
-      width: 30%;
+      width: 28%;
       padding: 1.5rem;
       margin: .5rem;
     }
@@ -481,20 +507,7 @@
     text-align: center;
     align-self: center;
   }
-
-  footer img {
-    margin-bottom: 0;
-    padding: 5px 5px;
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-  }
-
-  footer img:hover {
-    width: 40px;
-    height: 40px;
-  }
-  
+ 
   footer small {
     line-height: 1.5;
   }
