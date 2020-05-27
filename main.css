@@ -321,6 +321,24 @@
     }
   
   }
+
+  @media (min-width: 1024px) {
+    
+    .location-container {
+      flex-direction: row;
+    }
+
+    .location {
+      width: 260px;
+      padding: 1.5rem;
+      margin: .5rem 4rem;
+    }
+  
+    .location-text::after {
+      display: none;
+    }
+  
+  }
   
   /* =============================
   
