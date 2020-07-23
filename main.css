@@ -68,6 +68,10 @@ img {
     margin-bottom: 1.5rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   box-sizing: border-box;
   background: var(--background-color);
@@ -189,6 +193,10 @@ a:hover {
     opacity: 95%;
     animation: fadeIn 1s ease-out 3s;
     animation-fill-mode: backwards;
+}
+
+.arrow-down:hover {
+  cursor: pointer;
 }
 
 .arrow-down::after{

@@ -23,7 +23,7 @@
         </div>
         <div class="arrow-down"></div>
   </header>
-  <main>
+  <main id='main'>
     <section class="locations-section">
       <h2>Helyszínek</h2>
       <div class="location-container">
@@ -136,5 +136,14 @@
     <p><small>Made by Mark Kovacs Budapest &copy;2020</small></p>
     <p><small>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></small></p>
   </footer>
+
+  <script>
+    let arrow = document.querySelector('.arrow-down');
+    let el = document.querySelector('#main');
+
+    arrow.addEventListener('click', function () {
+      el.scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
