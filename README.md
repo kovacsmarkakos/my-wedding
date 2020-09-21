@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to My Wedding 👋</h1>
+<h1 align="center">My Wedding :wedding:</h1>
 <p>
 </p>
 
