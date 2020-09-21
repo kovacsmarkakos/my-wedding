@@ -2,8 +2,9 @@
 <p>
 </p>
 
-> Wedding invitation website that I created for my wedding. <br>
-> Mobile first, responsive, single-page site.
+> This is a brochure style website that I created for my wedding.
+> 
+> Mobile first, responsive, single-page site, using HTML, CSS, and a little bit of vanilla JavaScript.
 
 ### 🏠 [Homepage](https://github.com/kovacsmarkakos/my-wedding)
 
