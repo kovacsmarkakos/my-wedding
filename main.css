@@ -5,31 +5,61 @@
 =============================*/
 
 @font-face {
-  font-family: 'fontello';
-  src: url('fonts/fontello/fontello.eot?51289341');
-  src: url('fonts/fontello/fontello.eot?51289341#iefix') format('embedded-opentype'),
-       url('fonts/fontello/fontello.woff2') format('woff2'),
-       url('fonts/fontello/fontello.woff') format('woff'),
-       url('fonts/fontello/fontello.ttf?51289341') format('truetype'),
-       url('fonts/fontello/fontello.svg') format('svg');
+  font-family: "fontello";
+  src: url("../font/fontello.eot?36356032");
+  src: url("../font/fontello.eot?36356032#iefix") format("embedded-opentype"),
+    url("../font/fontello.woff2?36356032") format("woff2"),
+    url("../font/fontello.woff?36356032") format("woff"),
+    url("../font/fontello.ttf?36356032") format("truetype"),
+    url("../font/fontello.svg?36356032#fontello") format("svg");
   font-weight: normal;
   font-style: normal;
 }
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?36356032#fontello') format('svg');
+  }
+}
+*/
 
-[class^="icon-"]:before, [class*=" icon-"]:before {
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
-  font-size: 1.4rem;
+  speak: never;
+
   display: inline-block;
+  text-decoration: inherit;
   width: 1em;
-  margin-right: .2em;
+  margin-right: 0.2em;
   text-align: center;
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
- 
-.icon-twitter:before { content: '\f099'; } /* '' */
-.icon-github-circled:before { content: '\f09b'; } /* '' */
-.icon-instagram:before { content: '\f16d'; } /* '' */
+
+.icon-github-circled:before {
+  content: "\f09b";
+} /* '' */
+.icon-instagram:before {
+  content: "\f16d";
+} /* '' */
+.icon-linkedin-squared:before {
+  content: "\f30c";
+} /* '' */
 
 /* =============================
 
@@ -40,10 +70,10 @@
 :root {
   --background-color: rgba(245, 245, 245);
   --light-text: rgba(255, 255, 255);
-  --dark-text: rgba(49, 48, 74, .9);
-  --heading-text: rgba(208, 234, 255, .9);
-  --link-color: rgba(231, 173, 174);
-  --link-color-hover: rgba(248, 209, 218);
+  --dark-text: rgba(49, 48, 74, 0.9);
+  --heading-text: rgba(208, 234, 255, 0.9);
+  --link-color: rgb(231, 173, 174);
+  --link-color-hover: rgb(248, 209, 218);
 }
 
 /* =============================
@@ -55,17 +85,20 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
-  
+
 /* Single-direction margin declaration to establish vertical rhythm. */
-h1,h2,h3,
-ul,ol,
+h1,
+h2,
+h3,
+ul,
+ol,
 p,
 img {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 html {
@@ -75,7 +108,7 @@ html {
 body {
   box-sizing: border-box;
   background: var(--background-color);
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   font-size: 1.125rem;
   line-height: 1.5;
   color: var(--dark-text);
@@ -88,13 +121,13 @@ body {
 .contact {
   width: 95%;
   margin: 1.5rem auto;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   text-align: center;
 }
 
-h1, 
+h1,
 h2 {
-  font-family: 'abugetregular', cursive;
+  font-family: "abugetregular", cursive;
 }
 
 h2 {
@@ -108,13 +141,13 @@ h3 {
 a {
   text-decoration: none;
   color: var(--link-color);
-  transition: color .2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 a:hover {
   color: var(--link-color-hover);
 }
-  
+
 /* =============================
 
     HEADER STYLES
@@ -122,7 +155,12 @@ a:hover {
 =============================*/
 
 .cover {
-  background: linear-gradient(to right bottom, rgba(83, 81, 124, .1), rgb(83, 81, 124, .1)),url('images/cover-bg-img.jpg') no-repeat 48% center/cover;
+  background: linear-gradient(
+      to right bottom,
+      rgba(83, 81, 124, 0.1),
+      rgb(83, 81, 124, 0.1)
+    ),
+    url("images/cover-bg-img.jpg") no-repeat 48% center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -133,14 +171,19 @@ a:hover {
 
 @media (min-width: 768px) {
   .cover {
-    background: linear-gradient(to right bottom, rgba(83, 81, 124, .1), rgb(83, 81, 124, .1)), url('images/cover-bg-img.jpg') no-repeat center/cover;
+    background: linear-gradient(
+        to right bottom,
+        rgba(83, 81, 124, 0.1),
+        rgb(83, 81, 124, 0.1)
+      ),
+      url("images/cover-bg-img.jpg") no-repeat center/cover;
   }
 }
 
 .hero-text {
-  padding: .625rem;
+  padding: 0.625rem;
   color: var(--light-text);
-  background: rgba(49, 48, 74, .25);
+  background: rgba(49, 48, 74, 0.25);
 }
 
 .hero-text h1 {
@@ -162,7 +205,7 @@ a:hover {
 
 .tagline {
   font-size: 1.2rem;
-  letter-spacing: .18rem;
+  letter-spacing: 0.18rem;
   animation: moveInLeft 1s ease-out;
   animation-delay: 1s;
   animation-fill-mode: backwards;
@@ -176,7 +219,7 @@ a:hover {
 
 .date {
   font-size: 1.1rem;
-  letter-spacing: .18rem;
+  letter-spacing: 0.18rem;
   vertical-align: middle;
   animation: moveInRight 1s ease-out;
   animation-delay: 1s;
@@ -185,74 +228,83 @@ a:hover {
 
 /* ARROW DOWN */
 .arrow-down {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    position: absolute;
-    bottom: 19%;
-    opacity: 95%;
-    animation: fadeIn 1s ease-out 3s;
-    animation-fill-mode: backwards;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  bottom: 19%;
+  opacity: 95%;
+  animation: fadeIn 1s ease-out 3s;
+  animation-fill-mode: backwards;
 }
 
 .arrow-down:hover {
   cursor: pointer;
 }
 
-.arrow-down::after{
-    content: "";
-    width: 35px;
-    height: 35px;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    border-radius: 5px;
-    border-right: 3px solid var(--light-text);
-    border-bottom: 3px solid var(--light-text);
-    transform: rotate(45deg);
-    animation: arrow 2s infinite ease;
+.arrow-down::after {
+  content: "";
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 5px;
+  border-right: 3px solid var(--light-text);
+  border-bottom: 3px solid var(--light-text);
+  transform: rotate(45deg);
+  animation: arrow 2s infinite ease;
 }
 
-@keyframes arrow{
-    0%, 100% {
-      top: 40px;
-    }
-    50% {
-      top: 80px;
-    }
+@keyframes arrow {
+  0%,
+  100% {
+    top: 40px;
+  }
+  50% {
+    top: 80px;
+  }
 }
 
 @keyframes fadeIn {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-10rem); }
+    transform: translateX(-10rem);
+  }
   80% {
-    transform: translateX(1rem); }
+    transform: translateX(1rem);
+  }
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(10rem); }
+    transform: translateX(10rem);
+  }
   80% {
-    transform: translateX(-1rem); }
+    transform: translateX(-1rem);
+  }
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
 
 /* =============================
 
@@ -267,7 +319,7 @@ a:hover {
   text-align: center;
 }
 
-.locations-section a{
+.locations-section a {
   color: var(--dark-text);
 }
 
@@ -275,13 +327,13 @@ a:hover {
   color: var(--dark-text);
 }
 
-.location{
+.location {
   width: 230px;
   align-self: center;
 }
 
 .location-text {
-  transition: transform .2s;
+  transition: transform 0.2s;
   text-align: center;
 }
 
@@ -296,7 +348,7 @@ a:hover {
 }
 
 .location-text div {
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
 }
 
 .location-text:hover {
@@ -306,7 +358,7 @@ a:hover {
 .location-text::after {
   content: "";
   display: block;
-  height: .1rem;
+  height: 0.1rem;
   width: 25vw;
   margin: 1.5rem auto;
   background-color: var(--dark-text);
@@ -319,7 +371,7 @@ a:hover {
   .location {
     width: 260px;
     padding: 1.5rem;
-    margin: .5rem;
+    margin: 0.5rem;
   }
   .location-text::after {
     display: none;
@@ -333,7 +385,7 @@ a:hover {
   .location {
     width: 260px;
     padding: 1.5rem;
-    margin: .5rem 4rem;
+    margin: 0.5rem 4rem;
   }
   .location-text::after {
     display: none;
@@ -351,7 +403,7 @@ a:hover {
   text-align: left;
   background: var(--dark-text);
   color: var(--heading-text);
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
 }
 
 .program h2 {
@@ -360,20 +412,18 @@ a:hover {
 }
 
 .program p {
-  font-style: italic; 
+  font-style: italic;
 }
 
 .program ul {
-  letter-spacing: .025rem;
+  letter-spacing: 0.025rem;
 }
 
 @media (min-width: 768px) {
-
   .program-wrapper {
     width: 30vw;
     margin: 0 auto;
   }
-
 }
 
 /* =============================
@@ -386,7 +436,8 @@ a:hover {
   height: 7.5rem;
 }
 
-.gifts p:last-child {   /* To even out the bottom and top margins of this section. */
+.gifts p:last-child {
+  /* To even out the bottom and top margins of this section. */
   margin-bottom: 0;
 }
 
@@ -408,7 +459,7 @@ a:hover {
 }
 
 .faq p {
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
   text-align: left;
 }
 
@@ -421,7 +472,7 @@ a:hover {
 .question-group::after {
   content: "";
   display: block;
-  height: .13rem;
+  height: 0.13rem;
   width: 50vw;
   margin: 1.5rem auto;
   background-color: var(--heading-text);
@@ -435,7 +486,7 @@ a:hover {
     width: 30%;
     vertical-align: top;
     padding: 1.5rem;
-    margin: .5rem;
+    margin: 0.5rem;
   }
   .question-group::after {
     display: none;
@@ -447,7 +498,7 @@ a:hover {
 
 .question {
   font-weight: 700;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .answer {
@@ -483,8 +534,8 @@ footer {
   width: 100%;
   background-color: var(--dark-text);
   color: var(--light-text);
-  font-family: 'Muli', sans-serif;
-  font-size: .8rem;
+  font-family: "Muli", sans-serif;
+  font-size: 0.8rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
@@ -497,7 +548,7 @@ footer p {
   margin: 0;
   text-align: center;
   align-self: center;
-} 
+}
 
 .social {
   margin-bottom: 0;
@@ -513,6 +564,6 @@ footer small {
 @media (min-width: 768px) {
   footer {
     height: 10vh;
-    font-size: .875rem;
+    font-size: 0.875rem;
   }
 }
