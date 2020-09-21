@@ -1,11 +1,22 @@
-This is a website that I created for my wedding.
+<h1 align="center">Welcome to My Wedding 👋</h1>
+<p>
+</p>
 
-It is a mobile first, responsive, single-page site.
+> Wedding invitation website that I created for my wedding. <br>
+> Mobile first, responsive, single-page site.
 
-Fonts used:
+### 🏠 [Homepage](https://github.com/kovacsmarkakos/my-wedding)
 
-'Libre Baskerville', serif
-'Muli', sans-serif
+### ✨ [Demo](https://kovacsmarkakos.github.io/my-wedding/)
 
-Colors used:
+## Author
 
+👤 **Mark Kovacs**
+
+- Website: https://kovacsmarkakos.github.io/
+- Github: [@kovacsmarkakos](https://github.com/kovacsmarkakos)
+- LinkedIn: [@márk-kovács-0363b61b7](https://linkedin.com/in/márk-kovács-0363b61b7)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
