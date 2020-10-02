@@ -76,7 +76,7 @@ h3 {
 }
 
 a {
-  padding: 0.1rem;
+  padding: 0.2rem;
   text-decoration: none;
   color: var(--link-color);
   transition: color 0.2s ease-in-out;
@@ -472,15 +472,14 @@ footer {
   height: 18vh;
   width: 100%;
   padding: 0 5%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 0px;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: var(--dark-text);
   color: var(--light-text);
   font-family: "Muli", sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 footer p {
@@ -491,11 +490,11 @@ footer p {
 
 .smallText {
   align-self: center;
+  padding-bottom: 1rem;
 }
 
 .social {
   margin-bottom: 0;
-  text-align: start;
   align-self: center;
 }
 
@@ -512,17 +511,11 @@ footer small {
 @media (min-width: 768px) {
   footer {
     font-size: 1rem;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 5px;
-    grid-row-gap: 0px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .smallText {
-    justify-self: flex-start;
-  }
-
-  .social {
-    justify-self: end;
+    padding: 0;
   }
 }
