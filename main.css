@@ -76,6 +76,7 @@ h3 {
 }
 
 a {
+  padding: 0.1rem;
   text-decoration: none;
   color: var(--link-color);
   transition: color 0.2s ease-in-out;
@@ -470,27 +471,31 @@ a:hover {
 footer {
   height: 18vh;
   width: 100%;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 0px;
+  justify-items: center;
+  align-items: center;
   background-color: var(--dark-text);
   color: var(--light-text);
   font-family: "Muli", sans-serif;
-  font-size: 0.8rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 5px;
-  grid-row-gap: 0px;
-  justify-items: center;
+  font-size: 0.9rem;
 }
 
 footer p {
   margin: 0;
   text-align: center;
+  align-self: end;
+}
+
+.smallText {
   align-self: center;
 }
 
 .social {
   margin-bottom: 0;
-  text-align: center;
+  text-align: start;
   align-self: center;
 }
 
@@ -506,7 +511,18 @@ footer small {
 
 @media (min-width: 768px) {
   footer {
-    height: 15vh;
-    font-size: 0.875rem;
+    font-size: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 0px;
+  }
+
+  .smallText {
+    justify-self: flex-start;
+  }
+
+  .social {
+    justify-self: end;
   }
 }
