@@ -468,7 +468,7 @@ a:hover {
 =============================*/
 
 footer {
-  height: 15vh;
+  height: 18vh;
   width: 100%;
   background-color: var(--dark-text);
   color: var(--light-text);
@@ -506,7 +506,7 @@ footer small {
 
 @media (min-width: 768px) {
   footer {
-    height: 10vh;
+    height: 15vh;
     font-size: 0.875rem;
   }
 }
