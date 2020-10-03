@@ -53,7 +53,7 @@ body {
 
 .locations-section,
 .program,
-.gifts,
+.konvoj,
 .faq,
 .contact {
   width: 95%;
@@ -367,15 +367,15 @@ a:hover {
 
 /* =============================
 
-        GIFTS STYLES
+        Konvoj STYLES
 
 =============================*/
 
-.gifts img {
-  height: 7.5rem;
+.konvoj img {
+  height: 15rem;
 }
 
-.gifts p:last-child {
+.konvoj p:last-child {
   /* To even out the bottom and top margins of this section. */
   margin-bottom: 0;
 }
