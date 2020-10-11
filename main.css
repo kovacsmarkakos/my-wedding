@@ -45,7 +45,7 @@ html {
 body {
   box-sizing: border-box;
   background: var(--background-color);
-  font-family: "Libre Baskerville", serif;
+  font-family: 'Libre Baskerville', serif;
   font-size: 1.125rem;
   line-height: 1.5;
   color: var(--dark-text);
@@ -64,7 +64,7 @@ body {
 
 h1,
 h2 {
-  font-family: "abugetregular", cursive;
+  font-family: 'abugetregular', cursive;
 }
 
 h2 {
@@ -98,7 +98,7 @@ a:hover {
       rgba(83, 81, 124, 0.1),
       rgb(83, 81, 124, 0.1)
     ),
-    url("images/cover-bg-img.jpg") no-repeat 48% center/cover;
+    url('images/cover-bg-img.jpg') no-repeat 48% center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,7 +115,7 @@ a:hover {
         rgba(83, 81, 124, 0.1),
         rgb(83, 81, 124, 0.1)
       ),
-      url("images/cover-bg-img.jpg") no-repeat center/cover;
+      url('images/cover-bg-img.jpg') no-repeat center/cover;
   }
 }
 
@@ -182,7 +182,7 @@ a:hover {
 }
 
 .arrow-down::after {
-  content: "";
+  content: '';
   width: 35px;
   height: 35px;
   position: absolute;
@@ -287,7 +287,7 @@ a:hover {
 }
 
 .location-text div {
-  font-family: "Muli", sans-serif;
+  font-family: 'Muli', sans-serif;
 }
 
 .location-text:hover {
@@ -295,7 +295,7 @@ a:hover {
 }
 
 .location-text::after {
-  content: "";
+  content: '';
   display: block;
   height: 0.1rem;
   width: 25vw;
@@ -342,7 +342,7 @@ a:hover {
   text-align: left;
   background: var(--dark-text);
   color: var(--heading-text);
-  font-family: "Muli", sans-serif;
+  font-family: 'Muli', sans-serif;
 }
 
 .program h2 {
@@ -372,12 +372,18 @@ a:hover {
 =============================*/
 
 .konvoj img {
-  height: 15rem;
+  max-width: 90%;
 }
 
 .konvoj p:last-child {
   /* To even out the bottom and top margins of this section. */
   margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .konvoj img {
+    max-width: 50%;
+  }
 }
 
 /* =============================
@@ -398,7 +404,7 @@ a:hover {
 }
 
 .faq p {
-  font-family: "Muli", sans-serif;
+  font-family: 'Muli', sans-serif;
   text-align: left;
 }
 
@@ -409,7 +415,7 @@ a:hover {
 }
 
 .question-group::after {
-  content: "";
+  content: '';
   display: block;
   height: 0.13rem;
   width: 50vw;
@@ -478,7 +484,7 @@ footer {
   align-items: center;
   background-color: var(--dark-text);
   color: var(--light-text);
-  font-family: "Muli", sans-serif;
+  font-family: 'Muli', sans-serif;
   font-size: 0.8rem;
 }
 
