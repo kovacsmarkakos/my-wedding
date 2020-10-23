@@ -21,6 +21,7 @@
   <link href="fonts/stylesheet.css" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="main.css" />
   <script src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+  <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -83,7 +84,7 @@
     </section>
     <section class="konvoj">
       <h2>Konvoj útvonal</h2>
-      <img src="images/konvoj.png" alt="konvoj" />
+      <img id="konvoj" src="images/konvoj.png" alt="konvoj" />
     </section>
     <section class="faq">
       <h2>Kérdések &amp; Válaszok</h2>
@@ -191,15 +192,6 @@
       </a>
     </div>
   </footer>
-
-  <script>
-    let arrow = document.querySelector(".arrow-down");
-    let el = document.querySelector("#main");
-
-    arrow.addEventListener("click", function () {
-      el.scrollIntoView({ behavior: "smooth" });
-    });
-  </script>
 </body>
 
 </html>

@@ -123,6 +123,7 @@ a:hover {
   padding: 0.625rem;
   color: var(--light-text);
   background: rgba(49, 48, 74, 0.25);
+  cursor: default;
 }
 
 .hero-text h1 {
@@ -371,19 +372,38 @@ a:hover {
 
 =============================*/
 
-.konvoj img {
+#konvoj {
   max-width: 90%;
-}
-
-.konvoj p:last-child {
-  /* To even out the bottom and top margins of this section. */
-  margin-bottom: 0;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
-  .konvoj img {
+  #konvoj {
     max-width: 50%;
   }
+}
+
+#lightbox {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  cursor: default;
 }
 
 /* =============================
