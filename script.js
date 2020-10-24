@@ -1,5 +1,5 @@
 // Arrow script
-let arrow = document.querySelector('.arrow-down');
+let arrow = document.querySelector('.arrow');
 let el = document.querySelector('#main');
 
 arrow.addEventListener('click', function () {
