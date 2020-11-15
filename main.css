@@ -578,6 +578,12 @@ ARROW DOWN
   color: var(--dark-text);
 }
 
+@media (min-width: 768px) {
+  .contact {
+    width: 500px;
+  }
+}
+
 /* =============================
 
         FOOTER STYLES
